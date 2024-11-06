@@ -1,0 +1,151 @@
+/* Workflow Step Styles */
+.workflow-step {
+    flex: 1 1 30%;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+
+  
+  
+  .workflow-step img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Smooth transition for scale, shadow, and filter */
+    cursor: pointer;
+  }
+  
+  /* Hover effect */
+  .workflow-step img:hover {
+    transform: scale(1.1); /* Slightly larger scaling on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    filter: brightness(1.1); /* Slightly brighten the image */
+  }
+  
+  .workflow-step h3 {
+    font-size: 1.5em;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  /* Popup Styles */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    animation: fadeIn 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .popup-content h4 {
+    font-size: 1.8em;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .popup-content p {
+    font-size: 1.2em;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .popup-content pre {
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    overflow: auto;
+    font-size: 1em;
+    margin: 15px 0;
+  }
+  
+  /* Button Styles */
+  .button-primary, .button-success, .button-danger {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 10px;
+  }
+  
+  .button-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .button-primary:hover {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+  }
+  
+  .button-success {
+    background-color: #28a745;
+    border: none;
+  }
+  
+  .button-success:hover {
+    background-color: transparent;
+    border: 2px solid #28a745;
+    color: #28a745;
+  }
+  
+  .button-danger {
+    background-color: #dc3545;
+    border: none;
+  }
+  
+  .button-danger:hover {
+    background-color: transparent;
+    border: 2px solid #dc3545;
+    color: #dc3545;
+  }
+  
+  /* Loading State for Copy Button */
+  .copy-button {
+    border: 2px solid #28a745;
+    color: #28a745;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .copy-button.loading {
+    background-color: #28a745;
+    color: #fff;
+    cursor: not-allowed;
+  }
+  
+  .copy-button.copied {
+    border-color: #28a745;
+    color: #28a745;
+  }
+  
+  @media (min-width: 1024px) {
+    .workflow-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .workflow-step {
+      flex: 1 1 100%;
+    }
+  }
+  

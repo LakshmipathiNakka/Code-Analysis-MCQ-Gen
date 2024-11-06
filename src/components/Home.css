@@ -1,0 +1,23 @@
+.home {
+    text-align: center;
+  }
+  .main-heading{
+    color: darkslateblue;
+    font-size: 30px;
+    font-family: "Roboto";
+    font-weight: 600;
+  }
+  
+  .workflow-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .workflow-container {
+      flex-direction: column;
+    }
+  }
+  
